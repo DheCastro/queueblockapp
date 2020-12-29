@@ -1,2 +1,2 @@
-# Case BlockingQueue
-Exemplo de uso de uma blocking queue
+# Filas em Java – Case de BlockingQueue
+Demonstração do funcionamento de uma fila de bloqueio
