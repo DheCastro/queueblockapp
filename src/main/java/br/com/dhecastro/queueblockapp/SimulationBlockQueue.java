@@ -1,11 +1,11 @@
-package com.dextra.queueblockapp;
+package br.com.dhecastro.queueblockapp;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class SimulationBlockQueue {
-public static void main(String[] args) {
-        
+	public static void main(String[] args) {
+	        
 		//Config Queue Variables 
 		int queue_max_size = 10;
         int producers_number = 1;
@@ -18,12 +18,12 @@ public static void main(String[] args) {
 
         //Create producers
         for (int i = 0; i < producers_number; i++) {
-            new Thread(new NumbersProducer(queue, stop_thread, stop_thread_per_producer)).start();
+            new Thread(new Producer(queue, stop_thread, stop_thread_per_producer)).start();
         }
 
         //Create consumers
         for (int j = 0; j < consumers_number; j++) {
-            new Thread(new NumbersConsumer(queue, stop_thread)).start();
+            new Thread(new Consumer(queue, stop_thread)).start();
         }
-    }
+	}
 }
