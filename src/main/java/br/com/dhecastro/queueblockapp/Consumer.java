@@ -24,9 +24,7 @@ public class Consumer implements Runnable {
 				/** System.out.println("QUEUE SIZE ::::::::::::::::::::::::::::::: " + queue.size()); */
 				
 				System.out.println(Thread.currentThread().getName() + " result: " + result);
-
-				//uncomment to see how the thread waits for processing to finish, before starting the next one in the queue
-				/** for(int x = 0; x < 5; x++) { System.out.println("PROCESSING :::::::::::::::::::::::::::::::"); } */
+				
 			}
 		} catch (InterruptedException e) {
 			Thread.currentThread().interrupt();
